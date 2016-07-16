@@ -7,7 +7,8 @@ namespace Shop.Data
 {
     public class ShopDbContext : DbContext
     {
-        public ShopDbContext():base("ConnectionString")
+        public ShopDbContext()
+            : base("ConnectionString")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }

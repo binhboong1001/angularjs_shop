@@ -8,7 +8,8 @@ namespace Shop.Model.Model
     {
         [Key]
         [MaxLength(50)]
-        public string ID { set; get; }
+        [Column(TypeName = "varchar")]
+        public string Id { set; get; }
 
         [MaxLength(50)]
         [Required]

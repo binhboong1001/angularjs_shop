@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 namespace Shop.Data.Infrastructure
 {
-    public interface IRepositories<T> where T: class
+    public interface IRepository<T> where T : class
     {
         //Marks an entity as new
         void Add(T entity);
