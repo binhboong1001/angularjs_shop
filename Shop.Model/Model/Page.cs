@@ -1,8 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Shop.Model.Abstract;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using TeduShop.Model.Abstract;
 
-namespace TeduShop.Model.Models
+namespace Shop.Model.Models
 {
     [Table("Pages")]
     public class Page : Auditable
@@ -19,6 +19,7 @@ namespace TeduShop.Model.Models
         [MaxLength(256)]
         [Required]
         public string Alias { set; get; }
+        [Required]
 
         public string Content { set; get; }
     }

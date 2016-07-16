@@ -37,7 +37,9 @@ namespace Shop.Model.Model
        public string PaymentMethod { set; get; }
 
        public DateTime? CreatedDate { set; get; }
+       [MaxLength(100)]
        public string CreatedBy { set; get; }
+       [MaxLength(256)]
        public string PaymentStatus { set; get; }
        public bool Status { set; get; }
        public virtual IEnumerable<OrderDetail> OrderDetails { set; get; }

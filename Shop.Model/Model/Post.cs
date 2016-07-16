@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using TeduShop.Model.Abstract;
+using Shop.Model.Abstract;
 
-namespace TeduShop.Model.Models
+namespace Shop.Model.Models
 {
     [Table("Posts")]
     public class Post : Auditable
@@ -28,7 +28,7 @@ namespace TeduShop.Model.Models
 
         [MaxLength(500)]
         public string Description { set; get; }
-
+        [Required]
         public string Content { set; get; }
 
         public bool? HomeFlag { set; get; }

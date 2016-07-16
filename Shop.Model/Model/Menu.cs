@@ -24,6 +24,7 @@ namespace Shop.Model.Model
 
         [Required]
         public int GroupId { get; set; }
+        [MaxLength(156)]
         public string Target { get; set; }
         [Required]
         public bool Status { get; set; }

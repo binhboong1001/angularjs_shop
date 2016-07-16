@@ -6,28 +6,29 @@ using System.Xml.Linq;
 namespace Shop.Model.Model
 {
     [Table("Products")]
-    public class Product:BaseClass
+    public class Product : BaseClass
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
-        [Column(TypeName="nvarchar")]
+        [Column(TypeName = "nvarchar")]
         public string Name { get; set; }
         [Required]
         public string Alias { get; set; }
         [Required]
         public int CategoryId { get; set; }
-        public string Image  { get; set; }
+        [MaxLength(256)]
+        public string Image { get; set; }
         public XElement MoreImages { get; set; }
         [Required]
         public decimal Price { get; set; }
         public decimal? PromotionPrice { get; set; }
         public int? Warranty { get; set; }
-        [Column(TypeName="nvarchar")]
+        [Column(TypeName = "nvarchar")]
         public string Description { get; set; }
         [Required]
-        [Column(TypeName="nvarchar")]
+        [Column(TypeName = "nvarchar")]
         public string Content { get; set; }
         public bool? HomeFlag { get; set; }
         public bool? HotFlag { get; set; }

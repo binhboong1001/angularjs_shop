@@ -11,6 +11,7 @@ namespace Shop.Model.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
+        [MaxLength(256)]
         [Column(TypeName = "nvarchar")]
         public string Name { get; set; }
         public virtual IEnumerable<Menu> Menus { get; set; }
