@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Shop.Model.Models
+namespace Shop.Model.Model
 {
     [Table("Pages")]
     public class Page : Auditable

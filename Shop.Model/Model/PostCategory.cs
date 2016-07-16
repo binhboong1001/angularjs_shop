@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Shop.Model.Abstract;
 
-namespace Shop.Model.Models
+namespace Shop.Model.Model
 {
     [Table("PostCategories")]
     public class PostCategory : Auditable

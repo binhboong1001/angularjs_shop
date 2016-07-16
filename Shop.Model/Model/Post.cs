@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Shop.Model.Abstract;
 
-namespace Shop.Model.Models
+namespace Shop.Model.Model
 {
     [Table("Posts")]
     public class Post : Auditable
