@@ -126,7 +126,11 @@ namespace Shop.Data.Infrastructure
             total = _resetSet.Count();
             return _resetSet.AsQueryable();
         }
-
+       /// <summary>
+       /// 
+       /// </summary>
+       /// <param name="predicate"></param>
+       /// <returns></returns>
         public bool CheckContains(Expression<Func<T, bool>> predicate)
         {
             return dataContext.Set<T>().Count<T>(predicate) > 0;
