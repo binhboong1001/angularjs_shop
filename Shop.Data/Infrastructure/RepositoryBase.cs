@@ -47,6 +47,16 @@ namespace Shop.Data.Infrastructure
         {
             dbSet.Remove(entity);
         }
+        public virtual void Delete(int Id)
+        {
+            var entity = dbSet.Find(Id);
+            dbSet.Remove(entity);
+        }
+        public virtual void Delete(string Id)
+        {
+            var entity = dbSet.Find(Id);
+            dbSet.Remove(entity);
+        }
 
         public virtual void DeleteMulti(Expression<Func<T, bool>> where)
         {

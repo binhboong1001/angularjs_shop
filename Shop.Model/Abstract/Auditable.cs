@@ -53,5 +53,18 @@ namespace Shop.Model.Abstract
                 throw new NotImplementedException();
             }
         }
+
+
+        public bool Status
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }

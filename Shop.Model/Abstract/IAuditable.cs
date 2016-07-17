@@ -8,5 +8,6 @@ namespace Shop.Model.Abstract
         string CreatedBy { get; set; }
         DateTime? UpdateDate { set; get; }
         string UpdateBy { get; set; }
+        bool Status { set; get; }
     }
 }

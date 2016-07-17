@@ -1,7 +1,7 @@
 ﻿using Shop.Data.Infrastructure;
 using Shop.Model.Model;
 
-namespace TeduShop.Data.Repositories
+namespace Shop.Data.Repositories
 {
     public interface IProductTagRepository : IRepository<ProductTag>
     {

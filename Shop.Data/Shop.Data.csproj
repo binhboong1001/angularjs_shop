@@ -88,10 +88,6 @@
       <Project>{16f4c38a-a396-4a1f-94c9-6f2d39547130}</Project>
       <Name>Shop.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Shop.Service\Shop.Service.csproj">
-      <Project>{e559b03a-c012-4471-b106-dd838046ef9c}</Project>
-      <Name>Shop.Service</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201607161713033_InitialDB.resx">
