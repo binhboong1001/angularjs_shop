@@ -61,7 +61,7 @@ namespace Shop.Service
 
         public IEnumerable<Post> GetAllByTagPaging(string tag, int page, int pageSize, out int totalRow)
         {
-            return _postRepository.GetMultiPaging(x => x.Status, out totalRow, page, pageSize);
+            return _postRepository.GetAllByTag(tag, page, pageSize,out totalRow);
         }
 
         public void SaveChanges()

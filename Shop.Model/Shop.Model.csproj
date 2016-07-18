@@ -53,6 +53,7 @@
     <Compile Include="Abstract\ISwitchable.cs" />
     <Compile Include="Abstract\Seoable.cs" />
     <Compile Include="Abstract\Switchable.cs" />
+    <Compile Include="Model\Error.cs" />
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\OrderDetail.cs" />
     <Compile Include="Model\Page.cs" />

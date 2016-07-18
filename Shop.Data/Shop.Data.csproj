@@ -55,7 +55,16 @@
     <Compile Include="Migrations\201607161713033_InitialDB.Designer.cs">
       <DependentUpon>201607161713033_InitialDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607171433415_AddTableError.cs" />
+    <Compile Include="Migrations\201607171433415_AddTableError.Designer.cs">
+      <DependentUpon>201607171433415_AddTableError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607171455300_AddTableError1.cs" />
+    <Compile Include="Migrations\201607171455300_AddTableError1.Designer.cs">
+      <DependentUpon>201607171455300_AddTableError1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Repositories\ErrorRepository.cs" />
     <Compile Include="Repositories\FooterRepository.cs" />
     <Compile Include="Repositories\MenuGroupRepository.cs" />
     <Compile Include="Repositories\MenuRepository.cs" />
@@ -92,6 +101,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201607161713033_InitialDB.resx">
       <DependentUpon>201607161713033_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607171433415_AddTableError.resx">
+      <DependentUpon>201607171433415_AddTableError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607171455300_AddTableError1.resx">
+      <DependentUpon>201607171455300_AddTableError1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
