@@ -43,19 +43,19 @@ namespace Shop.Data.Infrastructure
             dataContext.Entry(entity).State = EntityState.Modified;
         }
 
-        public virtual void Delete(T entity)
+        public virtual T Delete(T entity)
         {
-            dbSet.Remove(entity);
+            return dbSet.Remove(entity);
         }
-        public virtual void Delete(int Id)
+        public virtual T Delete(int Id)
         {
             var entity = dbSet.Find(Id);
-            dbSet.Remove(entity);
+            return dbSet.Remove(entity);
         }
-        public virtual void Delete(string Id)
+        public virtual T Delete(string Id)
         {
             var entity = dbSet.Find(Id);
-            dbSet.Remove(entity);
+            return dbSet.Remove(entity);
         }
 
         public virtual void DeleteMulti(Expression<Func<T, bool>> where)
@@ -81,7 +81,7 @@ namespace Shop.Data.Infrastructure
             return dbSet.Count(where);
         }
 
-        public IQueryable<T> GetAll(string[] includes = null)
+        public IEnumerable<T> GetAll(string[] includes = null)
         {
             //HANDLE INCLUDES FOR ASSOCIATED OBJECTS IF APPLICABLE
             if (includes != null && includes.Count() > 0)
@@ -97,10 +97,10 @@ namespace Shop.Data.Infrastructure
 
         public T GetSingleByCondition(Expression<Func<T, bool>> expression, string[] includes = null)
         {
-            return GetAll(includes).FirstOrDefault(expression);
+            return GetAll(includes).FirstOrDefault<T>();
         }
 
-        public virtual IQueryable<T> GetMulti(Expression<Func<T, bool>> predicate, string[] includes = null)
+        public virtual IEnumerable<T> GetMulti(Expression<Func<T, bool>> predicate, string[] includes = null)
         {
             //HANDLE INCLUDES FOR ASSOCIATED OBJECTS IF APPLICABLE
             if (includes != null && includes.Count() > 0)
@@ -114,10 +114,10 @@ namespace Shop.Data.Infrastructure
             return dataContext.Set<T>().Where<T>(predicate).AsQueryable<T>();
         }
 
-        public virtual IQueryable<T> GetMultiPaging(Expression<Func<T, bool>> predicate, out int total, int index = 0, int size = 20, string[] includes = null)
+        public virtual IEnumerable<T> GetMultiPaging(Expression<Func<T, bool>> predicate, out int total, int index = 0, int size = 20, string[] includes = null)
         {
             int skipCount = index * size;
-            IQueryable<T> _resetSet;
+            IEnumerable<T> _resetSet;
 
             //HANDLE INCLUDES FOR ASSOCIATED OBJECTS IF APPLICABLE
             if (includes != null && includes.Count() > 0)

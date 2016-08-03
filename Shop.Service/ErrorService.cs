@@ -13,6 +13,7 @@ namespace Shop.Service
     {
         void Create(Error error);
         void Save();
+        Error GetById(int id);
     }
     public class ErrorService : IErrorService
     {
@@ -31,6 +32,10 @@ namespace Shop.Service
         public void Save()
         {
             _unitOfWork.Commit();
+        }
+        public Error GetById(int id)
+        {
+            return this._errorRepository.GetSingleById(id);
         }
     }
 }
