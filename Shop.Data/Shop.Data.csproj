@@ -89,6 +89,10 @@
     <Compile Include="Migrations\201608031517329_Intergrated-aspNetIdentity.Designer.cs">
       <DependentUpon>201608031517329_Intergrated-aspNetIdentity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608051520214_identity.cs" />
+    <Compile Include="Migrations\201608051520214_identity.Designer.cs">
+      <DependentUpon>201608051520214_identity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\ErrorRepository.cs" />
     <Compile Include="Repositories\FooterRepository.cs" />
@@ -136,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608031517329_Intergrated-aspNetIdentity.resx">
       <DependentUpon>201608031517329_Intergrated-aspNetIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608051520214_identity.resx">
+      <DependentUpon>201608051520214_identity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
