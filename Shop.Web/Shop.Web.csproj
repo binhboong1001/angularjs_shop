@@ -188,6 +188,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\components\products\product.route.js" />
+    <Content Include="app\components\products\productAddView.html" />
+    <Content Include="app\components\products\productController.js" />
+    <Content Include="app\components\products\productEditView.html" />
+    <Content Include="app\components\products\productListView.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -196,10 +202,6 @@
     <None Include=".bin\node.cmd" />
     <Content Include=".bowerrc" />
     <Content Include="bower.json" />
-    <Content Include="Scripts\plugins\angular\angular-csp.css" />
-    <Content Include="Scripts\plugins\angular\angular.js" />
-    <Content Include="Scripts\plugins\angular\angular.min.js" />
-    <Content Include="Scripts\plugins\angular\index.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -208,28 +210,31 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Scripts\plugins\angular\.bower.json" />
-    <Content Include="Scripts\plugins\angular\angular.min.js.gzip" />
-    <Content Include="Scripts\plugins\angular\angular.min.js.map" />
-    <Content Include="Scripts\plugins\angular\bower.json" />
-    <Content Include="Scripts\plugins\angular\LICENSE.md" />
-    <Content Include="Scripts\plugins\angular\package.json" />
-    <Content Include="Scripts\plugins\angular\README.md" />
     <Content Include="Views\Admin\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\components\orders\" />
+    <Folder Include="app\components\product_categories\" />
+    <Folder Include="app\components\roles\" />
+    <Folder Include="app\components\users\" />
+    <Folder Include="app\shares\footer\" />
+    <Folder Include="app\shares\navigation\" />
+    <Folder Include="app\shares\services\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\admin\" />
+    <Folder Include="Assets\admin\css\" />
+    <Folder Include="Assets\admin\img\" />
+    <Folder Include="Assets\admin\js\" />
+    <Folder Include="Assets\admin\libs\" />
     <Folder Include="Assets\client\" />
     <Folder Include="Infrastructure\Extensions\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\spa\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
+    <Content Include="app\app.route.js" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
