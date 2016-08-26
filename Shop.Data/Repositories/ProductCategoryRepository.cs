@@ -4,7 +4,8 @@ using Shop.Model.Model;
 using System.Collections.Generic;
 namespace Shop.Data.Repositories
 {
-    public interface IProductCategoryReposotory{
+    public interface IProductCategoryReposotory : IRepository<ProductCategory>
+    {
         IEnumerable<ProductCategory> GetByAlias(string alias);
     }
     public class ProductCategoryRepository:RepositoryBase<ProductCategory>,IProductCategoryReposotory
